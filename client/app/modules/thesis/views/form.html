@@ -4,19 +4,29 @@
       <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa fa-arrow-left"></i></a>
       <span ng-show="!ctrl.thesis.id" translate>Add a new post</span>
       <span ng-show="ctrl.thesis.id" translate>Edit post</span>
+
+      <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="form.$invalid">
+        Save
+      </button>
+      <button data-ng-show="!ctrl.thesis.id" type="submit" class="btn btn-primary btn-primary" ng-click="ctrl.submit(true)" ng-disabled="form.$invalid">
+        Save and add attachment
+      </button>
+      <button type="button" class="btn btn-default" ng-click="">Close</button>
+
     </div>
     <div class="panel-body">
       <div class="row">
         <div class="col-md-4">
           <formly-form model="ctrl.thesis" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8" data-ng-show="ctrl.thesis.id">
           <input type="file" class="form-control" nv-file-select uploader="ctrl.uploader" multiple /><br/>
 
           <table class="table">
               <thead>
                   <tr>
-                      <th width="50%">Name</th>
+                      <th></th>
+                      <th>Name</th>
                       <th ng-show="ctrl.uploader.isHTML5">Size</th>
                       <th ng-show="ctrl.uploader.isHTML5">Progress</th>
                       <th>Status</th>
@@ -26,6 +36,9 @@
               <tbody>
                 <tbody>
                            <tr ng-repeat="item in ctrl.uploader.queue">
+                               <td>
+                                 <input type="text" class="form-control" placeholder="Title" data-ng-model="item.name" />
+                               </td>
                                <td><strong>{{ item.file.name }}</strong></td>
                                <td ng-show="ctrl.uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
                                <td ng-show="ctrl.uploader.isHTML5">
@@ -76,7 +89,10 @@
     </div>
     <div class="panel-footer">
       <button type="submit" class="btn btn-primary btn-success" ng-click="ctrl.submit()" ng-disabled="form.$invalid">
-        Submit
+        Save
+      </button>
+      <button data-ng-show="!ctrl.thesis.id" type="submit" class="btn btn-primary btn-primary" ng-click="ctrl.submit(true)" ng-disabled="form.$invalid">
+        Save and add attachment
       </button>
       <button type="button" class="btn btn-default" ng-click="ctrl.formOptions.resetModel()">Reset</button>
     </div>

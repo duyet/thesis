@@ -6,7 +6,8 @@
       this.getPosts = function () {
         return Thesis.find({
           filter: {
-            order: 'created DESC'
+            order: 'created DESC',
+            include: ['attachments']
           }
         }).$promise;
       };
@@ -17,13 +18,14 @@
         }, {include: ['attachments']}).$promise;
       };
 
-      this.upsertPost = function (post) {
+      this.upsertPost = function (post, cb) {
         return Thesis.upsert(post).$promise
-          .then(function () {
+          .then(function (post) {
             CoreService.toastSuccess(
               gettextCatalog.getString('Post saved'),
               gettextCatalog.getString('Your post is safe with us!')
             );
+            cb(post)
           })
           .catch(function (err) {
             CoreService.toastSuccess(

@@ -29,10 +29,12 @@
   },
   "validations": [],
   "relations": {
-    "category": {
+    "attachment_linked": {
       "type": "belongsTo",
       "model": "Thesis",
-      "foreignKey": "thesisId"
+      "options": {
+        "invertProperties": true
+      }
     }
   },
   "acls": [],

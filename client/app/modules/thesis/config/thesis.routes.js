@@ -35,13 +35,16 @@
             this.thesis.attachments = [];
             // See: http://nervgh.github.io/pages/angular-file-upload/examples/simple/controllers.js
             this.uploader = new FileUploader({
-              url: CoreService.env.apiUrl + '/containers/files/upload',
+              url: CoreService.env.apiUrl + 'containers/files/upload'
             });
-            this.uploader.onAfterAddingFile = function(fileItem) {
-              if (fileItem && fileItem.file && fileItem.file.name) {
+
+            this.uploader.onCompleteItem = function(fileItem, response, status, headers) {
+              console.log(fileItem)
+              console.log(response)
+              if (response && response.result && response.result.files && response.result.files.file) {
                 var attach = {
-                  name: fileItem.file.name,
-                  url: fileItem.file.name
+                  name: response.result.files.file[0].name,
+                  url: CoreService.env.apiUrl + 'containers/files/download/' + response.result.files.file[0].name
                 }
                 self.thesis.attachments.push(attach);
               }
@@ -50,9 +53,13 @@
 
             this.formFields = ThesisService.getFormFields();
             this.formOptions = {};
-            this.submit = function () {
-              ThesisService.upsertPost(this.thesis).then(function () {
-                $state.go('^.list');
+            this.submit = function (attach) {
+              var attach = attach || false;
+              var that = this;
+              ThesisService.upsertPost(this.thesis, function(post) {
+                  if (attach) $state.go('^.edit', {id: post.id});
+              }).then(function () {
+                if (!attach) $state.go('^.list');
               });
             };
           },
@@ -66,14 +73,24 @@
           url: '/:id/edit',
           templateUrl: 'modules/thesis/views/form.html',
           controllerAs: 'ctrl',
-          controller: function ($state, ThesisService, thesis) {
+          controller: function ($state, FileUploader, CoreService, ThesisService, thesis) {
             console.log(thesis);
             this.thesis = thesis;
+
+            // See: http://nervgh.github.io/pages/angular-file-upload/examples/simple/controllers.js
+            this.uploader = new FileUploader({
+              url: CoreService.env.apiUrl + 'containers/files/upload'
+            });
+
             this.formFields = ThesisService.getFormFields();
             this.formOptions = {};
-            this.submit = function () {
-              ThesisService.upsertPost(this.thesis).then(function () {
-                $state.go('^.list');
+            this.submit = function (attach) {
+              var attach = attach || false;
+              var that = this;
+              ThesisService.upsertPost(this.thesis, function(post) {
+                  if (attach) $state.go('^.edit', {id: post.id});
+              }).then(function () {
+                if (!attach) $state.go('^.list');
               });
             };
           },

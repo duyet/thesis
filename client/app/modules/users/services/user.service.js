@@ -100,6 +100,29 @@
             }
           });
         }
+        if (formType === 'password') {
+          form = [
+            {
+              key: 'password',
+              type: 'input',
+              templateOptions: {
+                label: gettextCatalog.getString('New Password'),
+                required: true
+              }
+            },
+            {
+              key: 'repassword',
+              type: 'input',
+              templateOptions: {
+                label: gettextCatalog.getString('Re-Enter Password'),
+                required: true
+              },
+              "expressionProperties": {
+                "templateOptions.disabled": "!model.password"
+              }
+            },
+          ]
+        }
         return form;
       };
 

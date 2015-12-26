@@ -8,7 +8,6 @@ client/app/js/lb-services.js
 client/app/js/config.js
 client/app/index.html
 .idea/
-storage/
 .strong-pm
 .sass-cache
 providers.json

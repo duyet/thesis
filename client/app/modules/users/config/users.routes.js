@@ -75,6 +75,25 @@
               return UserService.findById($stateParams.id);
             }
           }
+        }).state('app.users.password', {
+          url: '/password/:id',
+          templateUrl: 'modules/users/views/form.html',
+          controllerAs: 'ctrl',
+          controller: function ($state, UserService, user) {
+            this.user = user;
+            this.formFields = UserService.getFormFields('password');
+            this.formOptions = {};
+            this.submit = function () {
+              UserService.upsert(this.user).then(function () {
+                $state.go('^.list');
+              });
+            };
+          },
+          resolve: {
+            user: function ($stateParams, UserService) {
+              return UserService.findById($stateParams.id);
+            }
+          }
         })
         .state('app.users.view', {
           url: '/view/:id',
