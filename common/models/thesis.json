@@ -1,0 +1,54 @@
+{
+  "name": "Thesis",
+  "plural": "thesis",
+  "base": "AppModel",
+  "properties": {
+    "thesis_name": {
+      "type": "string",
+      "required": true
+    },
+    "intro": {
+      "type": "string",
+      "meta": {
+        "formType": "textarea"
+      }
+    },
+    "score_instructor" : {
+      "type": "number",
+      "default": 0
+    },
+    "score_reviewer" : {
+      "type": "number",
+      "default": 0
+    },
+    "score_council" : {
+      "type": "number",
+      "default": 0
+    },
+    "score_total" : {
+      "type": "number",
+      "default": 0
+    },
+    "counter" : {
+      "type": "number",
+      "default": 0
+    },
+    "have_disk" : {
+      "type": "boolean",
+      "default": 0
+    },
+    "status": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

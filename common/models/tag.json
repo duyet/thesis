@@ -1,0 +1,25 @@
+{
+  "name": "Tag",
+  "plural": "tag",
+  "base": "PersistedModel",
+  "properties": {
+    "tag_id": {
+      "type": "Number",
+      "id": true,
+      "generated": true
+    },
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "products": {
+      "type": "hasMany",
+      "model": "Product",
+      "foreignKey": "tag_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

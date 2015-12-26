@@ -1,0 +1,7 @@
+{
+  "db": {
+    "url": "mongodb://localhost/thesis",
+    "name": "db",
+    "connector": "loopback-connector-mongodb"
+  }
+}

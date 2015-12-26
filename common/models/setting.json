@@ -1,0 +1,19 @@
+{
+  "name": "Setting",
+  "plural": "settings",
+  "base": "PersistedModel",
+  "options": [],
+  "properties": {
+    "key": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
