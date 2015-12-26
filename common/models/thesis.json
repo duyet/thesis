@@ -48,7 +48,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "attachments": {
+      "type": "hasMany",
+      "model": "Attachment",
+      "foreignKey": "attachmentId"
+    }
+  },
   "acls": [],
   "methods": {}
 }

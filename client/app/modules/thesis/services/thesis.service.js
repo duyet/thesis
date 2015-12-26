@@ -14,7 +14,7 @@
       this.getPost = function (id) {
         return Thesis.findById({
           id: id
-        }).$promise;
+        }, {include: ['attachments']}).$promise;
       };
 
       this.upsertPost = function (post) {
@@ -60,7 +60,7 @@
       this.getFormFields = function () {
         return [
           {
-            key: 'title',
+            key: 'thesis_name',
             type: 'input',
             templateOptions: {
               label: gettextCatalog.getString('Thesis name'),

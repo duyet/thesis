@@ -54,6 +54,10 @@
     "dataSource": "db",
     "public": true
   },
+  "Attachment": {
+    "dataSource": "db",
+    "public": true
+  },
   "Setting": {
     "dataSource": "db",
     "public": true

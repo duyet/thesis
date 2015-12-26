@@ -30,12 +30,24 @@
           templateUrl: 'modules/thesis/views/form.html',
           controllerAs: 'ctrl',
           controller: function ($state, FileUploader, CoreService, ThesisService, thesis) {
+            var self = this;
             this.thesis = thesis;
-
+            this.thesis.attachments = [];
             // See: http://nervgh.github.io/pages/angular-file-upload/examples/simple/controllers.js
             this.uploader = new FileUploader({
               url: CoreService.env.apiUrl + '/containers/files/upload',
             });
+            this.uploader.onAfterAddingFile = function(fileItem) {
+              if (fileItem && fileItem.file && fileItem.file.name) {
+                var attach = {
+                  name: fileItem.file.name,
+                  url: fileItem.file.name
+                }
+                self.thesis.attachments.push(attach);
+              }
+            };
+
+
             this.formFields = ThesisService.getFormFields();
             this.formOptions = {};
             this.submit = function () {

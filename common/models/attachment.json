@@ -1,0 +1,40 @@
+{
+  "name": "Attachment",
+  "plural": "attachments",
+  "base": "PersistedModel",
+  "properties": {
+    "thesisId": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "limitation": {
+      "type": "string"
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "category": {
+      "type": "belongsTo",
+      "model": "Thesis",
+      "foreignKey": "thesisId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

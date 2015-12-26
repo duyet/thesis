@@ -2,13 +2,13 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <a href="" ui-sref="^.list" class="btn btn-xs btn-default"><i class="fa fa-arrow-left"></i></a>
-      <span ng-show="!ctrl.post.id" translate>Add a new post</span>
-      <span ng-show="ctrl.post.id" translate>Edit post</span>
+      <span ng-show="!ctrl.thesis.id" translate>Add a new post</span>
+      <span ng-show="ctrl.thesis.id" translate>Edit post</span>
     </div>
     <div class="panel-body">
       <div class="row">
         <div class="col-md-4">
-          <formly-form model="ctrl.post" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
+          <formly-form model="ctrl.thesis" fields="ctrl.formFields" options="ctrl.formOptions"></formly-form>
         </div>
         <div class="col-md-6">
           <input type="file" class="form-control" nv-file-select uploader="ctrl.uploader" multiple /><br/>

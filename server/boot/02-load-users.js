@@ -45,8 +45,8 @@ module.exports = function(app) {
           if (err) {
             console.error('error running findOrCreate('+role.name+') => ', err);
           }
-          (created) ? log('created role', createdRole.name)
-                    : log('found role', createdRole.name);
+          (created) ? log('created role', createdRole)
+                    : log('found role', createdRole);
           role.users.forEach(function(roleUser) {
             User.findOrCreate(
               {where: {username: roleUser.username}}, // find
