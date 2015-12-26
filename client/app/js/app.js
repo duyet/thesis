@@ -18,6 +18,7 @@
       'oitozero.ngSweetAlert',
       'config',
       'formly',
+      'angularFileUpload',
       'formlyBootstrap',
       'lbServices',
       'monospaced.elastic',

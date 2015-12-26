@@ -63,25 +63,82 @@
             key: 'title',
             type: 'input',
             templateOptions: {
-              label: gettextCatalog.getString('Title'),
+              label: gettextCatalog.getString('Thesis name'),
               required: true
             }
           },
           {
-            key: 'content',
+            key: 'intro',
             type: 'textarea',
             templateOptions: {
-              label: gettextCatalog.getString('Content'),
+              label: gettextCatalog.getString('Short intro'),
               required: true
             }
           },
           {
-            key: 'image',
+            key: 'score_instructor',
             type: 'input',
             templateOptions: {
-              label: gettextCatalog.getString('Image')
+              label: gettextCatalog.getString('Score instructor'),
+              type: 'number'
             }
-          }
+          },
+          {
+            key: 'score_reviewer',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Score reviewer'),
+              type: 'number'
+            }
+          },
+          {
+            key: 'score_council',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Score council'),
+              type: 'number'
+            }
+          },
+          {
+            key: 'score_total',
+            type: 'input',
+            templateOptions: {
+              label: gettextCatalog.getString('Score total'),
+              type: 'number'
+            }
+          },
+          {
+            key: 'have_disk',
+            type: 'checkbox',
+            templateOptions: {
+              label: gettextCatalog.getString('Have disk'),
+              type: 'checkbox'
+            }
+          },
+          {
+            key: 'status',
+            type: 'select',
+            templateOptions: {
+              label: gettextCatalog.getString('status'),
+              "options": [
+                  {
+                    "name": "Active",
+                    "value": "active"
+                  },
+                  {
+                    "name": "Disabled",
+                    "value": "disactive"
+                  }
+                ]
+            }
+          },
+          {
+            key: 'note',
+            type: 'textarea',
+            templateOptions: {
+              label: gettextCatalog.getString('Note'),
+            }
+          },
         ];
       };
 

@@ -29,8 +29,13 @@
           url: '/add',
           templateUrl: 'modules/thesis/views/form.html',
           controllerAs: 'ctrl',
-          controller: function ($state, ThesisService, thesis) {
-            this.post = post;
+          controller: function ($state, FileUploader, CoreService, ThesisService, thesis) {
+            this.thesis = thesis;
+
+            // See: http://nervgh.github.io/pages/angular-file-upload/examples/simple/controllers.js
+            this.uploader = new FileUploader({
+              url: CoreService.env.apiUrl + '/containers/files/upload',
+            });
             this.formFields = ThesisService.getFormFields();
             this.formOptions = {};
             this.submit = function () {
