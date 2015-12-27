@@ -1,0 +1,119 @@
+<style type="text/css">
+.documentItem {
+    border-top: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    color: #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.col-thin {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.moreInformation {
+    display: -webkit-inline-box;
+    display: -moz-inline-box;
+    display: -ms-flexbox;
+    width: 100%;
+    font-size: 11px;
+    padding-top: 10px;
+}
+
+.list_description {
+    padding-top: 5px;
+    font-size: small;
+    text-align: justify;
+}
+
+.list_category {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: small;
+}
+
+.moreInformation > div {
+    margin-right: 10px;
+}
+</style>
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <form name="eventForm">
+                <div class="box-header">
+                    <h3 class="box-title">Newest Thesis</h3>
+                    <div class="box-tools pull-right">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-xs-3" data-ng-repeat="item in ctrl.thesis | limitTo:4">
+                            <div class="thumbnail" da>
+                                <img holder="holder.js/200x100">
+                                <div class="caption">
+                                    <h3>{{ item.thesis_name }}</h3>
+                                    <p>{{ item.intro }}</p>
+                                    <p>
+                                        <a href="#" class="btn btn-primary" role="button">View</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                </div>
+                <div ng-if="loading" class="overlay"></div>
+                <div ng-if="loading" class="loading-img"></div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <form name="eventForm">
+                <div class="box-header">
+                    <h3 class="box-title">Thesis</h3>
+                    <div class="box-tools pull-right">
+                    </div>
+                </div>
+                <div class="box-body">
+                    <div class="row documentItem" data-ng-repeat="item in ctrl.thesis | limitTo:10">
+                        <div class="col-md-3 col-xs-3 col-thin">
+                            <a href="#" class="img">
+                                <img class="img-thumbnail" style="width: 140px; height: 150px" holder data-src="holder.js/140x150">
+                            </a>
+                        </div>
+                        <div class="col-md-9 col-xs-9 col-thin">
+                            <div>
+                                <a class="list_title" href="#/app/front/view/{{item.id}}">
+                                {{item.thesis_name}}
+                                </a>
+                            </div>
+                            <div class="moreInformation">
+                                <div class="list_size">
+                                    <span class="title_list_moreInformation"><i class="fa fa-tasks"></i> Dung lượng: </span>16.9 MB</div>
+                                <div class="list_type">
+                                    <span class="title_list_moreInformation"><i class="fa fa-file-pdf-o"></i> Kiểu file: </span>pdf
+                                </div>
+                                <div class="list_viewcount">
+                                    <span class="title_list_moreInformation"><i class="fa fa-eye"></i>Lượt xem: </span>{{ item.counter }}</div>
+                                <div class="list_downloadcount">
+                                    <span class="title_list_moreInformation"><i class="fa fa-download"></i> Lượt tải: </span>0</div>
+                            </div>
+                            <div class="list_description">
+                                {{item.intro}}
+                            </div>
+                            <div class="list_category">Tag: <a href="#">{{ item.tags }}</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                </div>
+                <div ng-if="loading" class="overlay"></div>
+                <div ng-if="loading" class="loading-img"></div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -32,6 +32,7 @@
       'ui.gravatar',
       'ui.grid',
       'ui.router',
+      'ngHolder',
       'toasty',
       'autofields',
       'gettext',
@@ -49,6 +50,7 @@
       'com.module.thesis',
       //'com.module.products',
       'com.module.sandbox',
+      'com.module.front',
       'com.module.settings',
       'com.module.users'
     ])
