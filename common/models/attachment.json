@@ -29,7 +29,7 @@
   },
   "validations": [],
   "relations": {
-    "attachment_linked": {
+    "thesis": {
       "type": "belongsTo",
       "model": "Thesis",
       "options": {

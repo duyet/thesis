@@ -50,12 +50,10 @@
   "validations": [],
   "relations": {
     "attachments": {
-      "type": "embedsMany",
+      "type": "hasMany",
       "model": "Attachment",
       "property": "attachments",
-      "scope": {
-        "include": "attachment_linked"
-      },
+      "foreignKey": "attachments",
       "options": {
         "validate": false,
         "forceId": false

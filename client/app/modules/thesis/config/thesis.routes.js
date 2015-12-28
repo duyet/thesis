@@ -32,7 +32,8 @@
           controller: function ($state, FileUploader, CoreService, ThesisService, thesis) {
             var self = this;
             this.thesis = thesis;
-            this.thesis.attachments = [];
+            this.attachments = [];
+
             // See: http://nervgh.github.io/pages/angular-file-upload/examples/simple/controllers.js
             this.uploader = new FileUploader({
               url: CoreService.env.apiUrl + 'containers/files/upload'
@@ -46,10 +47,18 @@
                   name: response.result.files.file[0].name,
                   url: CoreService.env.apiUrl + 'containers/files/download/' + response.result.files.file[0].name
                 }
-                self.thesis.attachments.push(attach);
+                self.attachments.push(attach);
               }
             };
 
+            this.saveAttachments = function() {
+              for (var i in this.attachments) {
+                var att = this.attachments[i];
+                AttachmentService.upsertAttachment(att).then(function () {
+                  console.log("Save ok");
+                });;
+              }
+            }
 
             this.formFields = ThesisService.getFormFields();
             this.formOptions = {};
@@ -61,6 +70,11 @@
               }).then(function () {
                 if (!attach) $state.go('^.list');
               });
+
+              // Save attachments
+              if (this.thesis.id && this.attachments.length) {
+                  this.saveAttachments();
+              }
             };
           },
           resolve: {
