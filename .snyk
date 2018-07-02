@@ -1,0 +1,27 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:mime:20170907':
+    - grunt-google-cdn > google-cdn > bower > request > form-data > mime:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-docular > docular > less > mime:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-docular > docular > less > request > form-data > mime:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-docular > docular > bower > request > form-data > mime:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-contrib-connect > connect > serve-static > send > mime:
+        patched: '2018-07-02T05:14:26.381Z'
+  'npm:tunnel-agent:20170305':
+    - grunt-google-cdn > google-cdn > bower > bower-registry-client > request > tunnel-agent:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-google-cdn > google-cdn > bower > request > tunnel-agent:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-docular > docular > less > request > tunnel-agent:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-docular > docular > bower > bower-registry-client > request > tunnel-agent:
+        patched: '2018-07-02T05:14:26.381Z'
+    - grunt-docular > docular > bower > request > tunnel-agent:
+        patched: '2018-07-02T05:14:26.381Z'
