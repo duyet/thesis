@@ -1,0 +1,29 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - gulp-nodemon > gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2018-10-29T05:24:28.238Z'
+    - grunt-docular > docular > bower > glob > minimatch:
+        patched: '2018-10-29T05:24:28.238Z'
+    - gulp-nodemon > gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2018-10-29T05:24:28.238Z'
+    - gulp-nodemon > gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2018-10-29T05:24:28.238Z'
+    - gulp-nodemon > gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2018-10-29T05:24:28.238Z'
+    - grunt-google-cdn > google-cdn > bower > glob > minimatch:
+        patched: '2018-10-29T05:24:28.238Z'
+  'npm:tunnel-agent:20170305':
+    - grunt-docular > docular > bower > request > tunnel-agent:
+        patched: '2018-10-29T05:24:28.238Z'
+    - grunt-google-cdn > google-cdn > bower > request > tunnel-agent:
+        patched: '2018-10-29T05:24:28.238Z'
+    - grunt-docular > docular > less > request > tunnel-agent:
+        patched: '2018-10-29T05:24:28.238Z'
+    - grunt-docular > docular > bower > bower-registry-client > request > tunnel-agent:
+        patched: '2018-10-29T05:24:28.238Z'
+    - grunt-google-cdn > google-cdn > bower > bower-registry-client > request > tunnel-agent:
+        patched: '2018-10-29T05:24:28.238Z'
