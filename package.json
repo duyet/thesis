@@ -74,7 +74,7 @@
     "loopback": "2.19.0",
     "loopback-boot": "2.6.4",
     "loopback-component-passport": "1.1.2",
-    "loopback-component-storage": "1.2.0",
+    "loopback-component-storage": "3.6.1",
     "loopback-connector-mongodb": "1.11.3",
     "loopback-connector-mysql": "^2.2.0",
     "loopback-datasource-juggler": "2.33.1",
