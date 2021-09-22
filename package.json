@@ -57,7 +57,7 @@
     "grunt-filerev": "2.1.2",
     "grunt-google-cdn": "0.4.3",
     "grunt-include-source": "1.0.0",
-    "grunt-jsbeautifier": "0.2.8",
+    "grunt-jsbeautifier": "0.2.13",
     "grunt-karma": "3.0.2",
     "grunt-loopback-sdk-angular": "1.1.2",
     "grunt-newer": "1.1.0",
