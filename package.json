@@ -62,7 +62,7 @@
     "grunt-loopback-sdk-angular": "1.1.2",
     "grunt-newer": "1.1.0",
     "grunt-ng-annotate": "0.10.0",
-    "grunt-ng-constant": "2.0.0",
+    "grunt-ng-constant": "2.0.3",
     "grunt-svgmin": "2.0.1",
     "grunt-usemin": "3.0.0",
     "grunt-wiredep": "3.0.0",
