@@ -68,7 +68,7 @@
     "grunt-wiredep": "3.0.1",
     "gulp-nodemon": "2.0.3",
     "jshint": "2.6.0",
-    "jshint-stylish": "1.0.0",
+    "jshint-stylish": "1.0.2",
     "load-grunt-tasks": "3.1.0",
     "lodash": "4.17.21",
     "loopback": "2.42.0",
