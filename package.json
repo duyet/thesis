@@ -97,7 +97,7 @@
     "connect-livereload": "0.6.1",
     "jasmine-core": "2.99.1",
     "karma": "0.13.22",
-    "karma-cli": "0.0.4",
+    "karma-cli": "0.1.2",
     "karma-coverage": "0.2.7",
     "karma-jasmine": "0.3.8",
     "karma-phantomjs-launcher": "0.1.4",
