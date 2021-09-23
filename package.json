@@ -64,7 +64,7 @@
     "grunt-ng-annotate": "0.10.0",
     "grunt-ng-constant": "2.0.3",
     "grunt-svgmin": "2.0.1",
-    "grunt-usemin": "3.0.0",
+    "grunt-usemin": "3.1.1",
     "grunt-wiredep": "3.0.1",
     "gulp-nodemon": "2.0.3",
     "jshint": "2.6.0",
