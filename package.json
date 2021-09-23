@@ -102,7 +102,7 @@
     "karma-jasmine": "0.3.8",
     "karma-phantomjs-launcher": "0.2.3",
     "mocha": "2.5.3",
-    "run-sequence": "1.0.2",
+    "run-sequence": "1.2.2",
     "tiny-lr": "0.1.5"
   }
 }
