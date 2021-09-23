@@ -83,7 +83,7 @@
     "passport-facebook": "1.0.3",
     "passport-google-oauth": "0.1.5",
     "passport-local": "1.0.0",
-    "passport-oauth2": "1.1.2",
+    "passport-oauth2": "1.6.0",
     "passport-twitter": "1.0.4",
     "serve-favicon": "2.2.0",
     "showdown": "1.9.1",
