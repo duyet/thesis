@@ -103,6 +103,6 @@
     "karma-phantomjs-launcher": "1.0.4",
     "mocha": "9.1.1",
     "run-sequence": "1.2.2",
-    "tiny-lr": "0.2.1"
+    "tiny-lr": "2.0.0"
   }
 }
