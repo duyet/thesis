@@ -100,7 +100,7 @@
     "karma-cli": "0.1.2",
     "karma-coverage": "2.0.3",
     "karma-jasmine": "0.3.8",
-    "karma-phantomjs-launcher": "0.2.3",
+    "karma-phantomjs-launcher": "1.0.4",
     "mocha": "2.5.3",
     "run-sequence": "1.2.2",
     "tiny-lr": "0.2.1"
