@@ -87,7 +87,7 @@
     "passport-twitter": "1.0.4",
     "serve-favicon": "2.2.0",
     "showdown": "1.9.1",
-    "time-grunt": "1.0.0"
+    "time-grunt": "1.4.0"
   },
   "optionalDependencies": {
     "loopback-explorer": "1.8.0"
