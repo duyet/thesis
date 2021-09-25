@@ -76,7 +76,7 @@
     "loopback-component-passport": "3.12.0",
     "loopback-component-storage": "3.7.0",
     "loopback-connector-mongodb": "6.1.0",
-    "loopback-connector-mysql": "^2.2.0",
+    "loopback-connector-mysql": "^6.0.0",
     "loopback-datasource-juggler": "4.26.0",
     "nodemon": "1.19.4",
     "passport": "0.5.0",
