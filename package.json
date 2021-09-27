@@ -21,7 +21,9 @@
     "test": "mocha",
     "start": "node server/server.js",
     "dev": "nodemon server/server.js --watch server --watch common --ext js,json ",
-    "postinstall": "bower install && grunt build"
+    "postinstall": "bower install && grunt build",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "main": "server/server.js",
   "dependencies": {
@@ -87,7 +89,8 @@
     "passport-twitter": "1.0.4",
     "serve-favicon": "2.5.0",
     "showdown": "1.9.1",
-    "time-grunt": "1.4.0"
+    "time-grunt": "1.4.0",
+    "@snyk/protect": "latest"
   },
   "optionalDependencies": {
     "loopback-explorer": "2.0.2"
@@ -104,5 +107,6 @@
     "mocha": "9.1.2",
     "run-sequence": "2.2.1",
     "tiny-lr": "2.0.0"
-  }
+  },
+  "snyk": true
 }
