@@ -79,7 +79,7 @@
     "loopback-connector-mysql": "^6.0.0",
     "loopback-datasource-juggler": "4.26.0",
     "nodemon": "2.0.15",
-    "passport": "0.5.0",
+    "passport": "0.5.1",
     "passport-facebook": "3.0.0",
     "passport-google-oauth": "2.0.0",
     "passport-local": "1.0.0",
