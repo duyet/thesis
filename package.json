@@ -96,7 +96,7 @@
     "browserify": "17.0.0",
     "connect-livereload": "0.6.1",
     "jasmine-core": "4.0.0",
-    "karma": "6.3.11",
+    "karma": "6.3.12",
     "karma-cli": "2.0.0",
     "karma-coverage": "2.1.0",
     "karma-jasmine": "4.0.1",
