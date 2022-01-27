@@ -5,7 +5,7 @@
   "version": "0.1.1",
   "engines": {
     "node": "16.13.x",
-    "npm": "8.3.x"
+    "npm": "8.4.x"
   },
   "homepage": "https://github.com/beeman/loopback-angular-admin",
   "author": "Bram Borggreve <borggreve@gmail.com>",
